@@ -1,0 +1,116 @@
+<html>
+
+
+<head>
+<title>HAMOUD Form</title>
+    <!-- @import bootstrap 5 css file-->
+<link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
+      
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
+</head>
+<body class="p-5 " style="background-color: #fddb00;">
+<main class="p-5 bg-white " >
+        <h1 class="display-5">HAMOUD Boulem</h1>
+    <div class="  row col-12">
+
+               <div class="main-card mb-3 card">
+                   <div class="card-body"><h5 class="card-title">SPAM form</h5>
+
+
+                       <form class="" action="" method="POST" id="SPAMform">
+                        <div class="position-relative row form-group">
+                            <label class="col-sm-2 col-form-label">Do you know us ?</label>
+                            <div class="col-sm-10">
+                             <input name="title" placeholder="set a Title.." type="text" id="SPAMtitle" class="form-control">
+                            </div>
+                           <div class="position-relative row form-group">
+                               <label class="col-sm-2 col-form-label">Do you consume our product ?</label>
+                               <div class="col-sm-10">
+                                <input name="title" placeholder="set a Title.." type="text" id="SPAMtitle" class="form-control">
+                               </div>
+                           </div>
+                           <div class="position-relative row mt-3 form-group">
+                               <label class="col-sm-2 col-form-label">do you agree with ou</label>
+                               <div class="col-sm-10"><input name="text" placeholder="set a cause.." id="SPAMcause" type="text" class="form-control"></div>
+                           </div>
+                           <div class="position-relative row mt-3 form-group">
+                               <label class="col-sm-2 col-form-label">Type</label>
+                               <div class="col-sm-10">
+                               <select name="select" class="form-control" id="SPAMtype">
+                               <option id='T1'>An opinion</option>
+                               <option id='T2'>Recommendation</option>
+                               <option id='T3'>Problem detection</option>
+                               <option id='T4'>Complaint</option>
+
+                               </select>
+                               </div>
+                           </div>
+                           
+                           <div class="position-relative row mt-3 form-group"><label for="exampleText" class="col-sm-2 col-form-label" >Select a product </label>
+                               <div class="col-sm-10">
+                                   <select name="select" class="form-select" id="SPAMprod">
+                                       <!-- requet SQl for prodects -->
+                                       
+                                       <?php
+                                       $db1= $db -> prepare("SELECT Ref,Categorie FROM produits;");
+                                      $db1 -> execute();
+                                      $cpt  =  $db1 -> rowCount();
+                                       $Prod = $db1 -> fetchALL();
+                                      
+                                        ?>
+                                     <!-- <script> alert($cpt)
+                                          </script> -->
+                                      <?php foreach ($Prod as $key => $value) { ?>  
+                                       <option class="dropdown-item px-1 my-3" id="<?= $value["Ref"] ?>"><?= $value["Ref"] ?>&nbsp;-&nbsp;<?= $value["Categorie"] ?> </option> 
+                                        <?php } ?>   
+                                    
+ 
+                                      
+
+
+                                        <!-- <script>
+                                            var sel= document.getElementById('prod');
+                                        var prod = <?php //echo $Prod ?>
+                                        prod.forEach(element => { 
+                                           sel.innerHTML+="<option>"+elemnt['Catigorie']+"</option>";
+                                         });
+                                        </script> -->
+                                                       
+                                                   </select></div>
+                           </div>
+
+                           <div class="position-relative row mt-2 form-group"><label for="exampleText" class="col-sm-2 col-form-label" >Description</label>
+                               <div class="col-sm-10"><textarea name="spamDescription" id="SPAMdescrp" placeholder="type somthing..." class="form-control" ></textarea></div>
+                           </div>
+                           
+                         
+                           </div>
+                    
+                          
+                           
+                       </form>
+                       <div class="position-relative row my-3 form-check">
+                               <div class="col-sm-10 offset-sm-2"><label class="col-sm-0 col-form-label" ></label>
+                                  
+                       <button class="btn btn-primary col-3 mb-5" id="sub">Submit</button>
+ 
+                               </div>
+                           </div>
+                   </div>
+               </div>
+    </div>
+
+</main>
+
+            <!-- @import SweetAlert2 -->
+<script src="js/SweetAlert.min.js"></script>
+<!-- <script src="js/SPAM.js"></script>  -->
+ <!-- @import bootstrap 5 js file-->
+ <script src="bootstrap-5.0.0-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.junctionx.LocalController">
+   <children>
+      <ImageView fx:id="img" fitHeight="500.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LG%20Climatiseur%2012000BTu-Dual%20Inverter%20Compressor%20-%20Blanclocal.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="close" layoutX="733.0" layoutY="-5.0" mnemonicParsing="false" onAction="#close" styleClass="transparent-button1" stylesheets="@style.css">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</Pane>

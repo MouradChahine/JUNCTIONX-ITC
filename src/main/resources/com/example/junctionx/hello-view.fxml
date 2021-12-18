@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1368.0" styleClass="stack-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.junctionx.HelloController">
+   <children>
+      <Pane fx:id="acueil" visible="false" StackPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="676.0" prefWidth="1359.0" spacing="5.0" visible="false">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="SEARCH FOR PRODUCT OR STORE" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Button" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Button" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="1065.0" layoutY="704.0" maxHeight="40.0" maxWidth="341.0" minHeight="40.0" prefHeight="40.0" prefWidth="281.0" spacing="30.0" styleClass="contact" stylesheets="@style.css" visible="false">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@face.png" />
+                     </image></ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@gmail.jpg" />
+                     </image></ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@twitter.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <ImageView fitHeight="802.0" fitWidth="1436.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="415.0" layoutY="344.0" spacing="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#SearchInterface" prefHeight="108.0" prefWidth="330.0" styleClass="button2" stylesheets="@style.css" text="Search For Product" textFill="#f2f2f2">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Survey" prefHeight="108.0" prefWidth="330.0" styleClass="button2" stylesheets="@style.css" text="Get Coupon" textFill="#f2f2f2">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane fx:id="searchInterface" prefHeight="200.0" prefWidth="200.0" styleClass="stack-pane" stylesheets="@style.css" visible="false">
+         <children>
+            <StackPane layoutX="305.0" layoutY="149.0" prefHeight="604.0" prefWidth="1050.0">
+               <children>
+                  <ScrollPane prefHeight="608.0" prefWidth="1050.0" vbarPolicy="NEVER">
+                     <content>
+                        <HBox fx:id="hboxItems" prefHeight="557.0" prefWidth="1047.0" spacing="10.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets top="5.0" />
+                           </opaqueInsets>
+                        </HBox>
+                     </content>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </ScrollPane>
+                  <Label fx:id="noProd" alignment="CENTER" prefHeight="76.0" prefWidth="712.0" text="No product with this name" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <VBox fx:id="Menu" alignment="TOP_CENTER" maxWidth="300.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="768.0" prefWidth="300.0" styleClass="optionbar" stylesheets="@style.css">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo1.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button fx:id="btnAll" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#setCategory" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="All Categories" textFill="#f2f2f2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAlim" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#setCategory" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="Alimentation" textFill="#f2f2f2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAppliance" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#setCategory" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="Home Appliance" textFill="#f2f2f2" wrapText="true">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCloths" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#setCategory" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="Cloths" textFill="#f2f2f2">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCosmetics" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#setCategory" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="Cosmetics" textFill="#f2f2f2">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnComputers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#setCategory" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="Computers and Accessories" textFill="#f2f2f2" wrapText="true">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnBack" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#Back" prefHeight="70.0" prefWidth="300.0" styleClass="button1" stylesheets="@style.css" text="Back" textFill="#f2f2f2">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font name="Arial Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <TextField fx:id="searchField" layoutX="531.0" layoutY="34.0" onKeyPressed="#FillTable" onKeyReleased="#FillTable" onKeyTyped="#FillTable" prefHeight="50.0" prefWidth="465.0" promptText="Tap the name of the product" style="-fx-text-fill: black;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="40.0" fitWidth="60.0" layoutX="939.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@loup1.png" />
+               </image>
+            </ImageView>
+            <ToggleButton fx:id="orderBy" layoutX="1030.0" layoutY="35.0" mnemonicParsing="false" onAction="#toggle" prefHeight="50.0" prefWidth="125.0" text="PRICE" textFill="#476072">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </Pane>
+      <Pane fx:id="Survey" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="775.0" fitWidth="1359.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@background1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="127.0" layoutY="48.0" prefHeight="93.0" prefWidth="648.0" styleClass="label1" stylesheets="@style.css" text="Dear Costumer, in order to get coupon for prices you should response for 5 surveys" textAlignment="CENTER" textFill="#476072" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="SurveyCount" alignment="CENTER" layoutX="128.0" layoutY="139.0" prefHeight="70.0" prefWidth="648.0" styleClass="label1" stylesheets="@style.css" text="Surveys responsed : 0" textAlignment="CENTER" textFill="#476072" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" layoutX="157.0" layoutY="240.0" prefHeight="466.0" prefWidth="617.0">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="462.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="hamoud" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="116.0" mnemonicParsing="false" onAction="#OpenSurvey" prefHeight="116.0" prefWidth="600.0" styleClass="Survey-Button" stylesheets="@style.css" text="HAMOUD BOUALEM's Survey        " textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="106.0" fitWidth="159.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Hamoud_logo%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="nike" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="116.0" mnemonicParsing="false" onAction="#OpenSurvey" prefHeight="94.0" prefWidth="600.0" styleClass="Survey-Button" stylesheets="@style.css" text="NIKE's Survey                 " textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="119.0" fitWidth="124.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Nike.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="lg" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="116.0" mnemonicParsing="false" onAction="#OpenSurvey" prefHeight="116.0" prefWidth="600.0" styleClass="Survey-Button" stylesheets="@style.css" text="LG's Survey                   " textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="82.0" fitWidth="158.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@LG.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="dell" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="116.0" mnemonicParsing="false" onAction="#OpenSurvey" prefHeight="116.0" prefWidth="600.0" styleClass="Survey-Button" stylesheets="@style.css" text="DELL's Survey                    " textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="111.0" fitWidth="129.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Dell_logo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="rouiba" alignment="CENTER_RIGHT" contentDisplay="RIGHT" minHeight="116.0" mnemonicParsing="false" onAction="#OpenSurvey" prefHeight="116.0" prefWidth="600.0" styleClass="Survey-Button" stylesheets="@style.css" text="ROUIBA's Survey                     " textAlignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="82.0" fitWidth="158.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Logo_Rouiba.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Button fx:id="link" layoutX="301.0" layoutY="210.0" mnemonicParsing="false" onAction="#browse" prefHeight="25.0" prefWidth="314.0" styleClass="hyperlink" stylesheets="@style.css" text="get your coupon" textFill="#02a802" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

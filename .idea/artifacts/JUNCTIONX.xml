@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="JUNCTIONX">
+    <output-path>$PROJECT_DIR$/out/artifacts/JUNCTIONX</output-path>
+    <root id="root">
+      <element id="archive" name="JUNCTIONX.jar">
+        <element id="module-output" name="JUNCTIONX" />
+      </element>
+    </root>
+  </artifact>
+</component>

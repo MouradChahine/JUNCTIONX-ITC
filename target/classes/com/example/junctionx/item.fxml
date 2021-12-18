@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="470.0" maxWidth="660.0" prefHeight="470.0" prefWidth="600.0" spacing="10.0" styleClass="item" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.junctionx.ItemController">
+   <children>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="600.0" stylesheets="@style.css">
+         <children>
+            <VBox alignment="CENTER" prefHeight="337.0" prefWidth="297.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="img" fitHeight="281.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Brandt.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="364.5" startX="576.7929077148438" startY="0.7928932309150696" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="337.0" prefWidth="294.0">
+               <children>
+                  <Label fx:id="prodName" alignment="CENTER" contentDisplay="CENTER" prefHeight="120.0" prefWidth="485.0" styleClass="label1" stylesheets="@style.css" text="Refrigérateur Brandt A15" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="364.5" startX="576.7929077148438" startY="0.7928932309150696" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="rate" alignment="CENTER" contentDisplay="CENTER" prefHeight="76.0" prefWidth="91.0" styleClass="label1" stylesheets="@style.css" text="4 etoiles" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="24.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@et2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Line endX="364.5" startX="576.7929077148438" startY="0.7928932309150696" />
+                  <Label fx:id="type" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="309.0" styleClass="label1" stylesheets="@style.css" text="Réfrigérateur" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="364.5" startX="576.7929077148438" startY="0.7928932309150696" />
+                  <Label fx:id="category" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="309.0" styleClass="label1" stylesheets="@style.css" text="Electromenager" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="364.5" startX="576.7929077148438" startY="0.7928932309150696" />
+                  <Label fx:id="Prix" alignment="CENTER" contentDisplay="CENTER" prefHeight="106.0" prefWidth="352.0" styleClass="label1" stylesheets="@style.css" text="140000 DA" textAlignment="CENTER" textFill="#0eb93b" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <ScrollPane hbarPolicy="NEVER" maxHeight="120.0" maxWidth="510.0" minHeight="120.0" prefHeight="120.0" prefWidth="510.0">
+         <content>
+            <Label fx:id="description" alignment="CENTER" contentDisplay="CENTER" prefHeight="113.0" prefWidth="500.0" styleClass="label1" stylesheets="@style.css" text="sdfihqsndklfmn,qmks,dfmlkqz,ezsdmcf,dsk sdqfljqsdjflnsdqlkjnfkdsqnflndslkfnlkknsqdklnfnlknsdfklnlknf" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </content>
+      </ScrollPane>
+      <HBox maxHeight="50.0" maxWidth="620.0" minHeight="50.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Localisation" prefHeight="50.0" prefWidth="310.0" styleClass="button2" stylesheets="@style.css" text="GET LOCALISATION" textFill="#f2f2f2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Rate" mnemonicParsing="false" onAction="#Rate" prefHeight="50.0" prefWidth="310.0" styleClass="button2" stylesheets="@style.css" text="RATE THIS PRODUCT" textFill="#f2f2f2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
